@@ -163,22 +163,32 @@ hr {
 	text-align: center;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
+
 	.header_pub-info {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		margin: 20px 30px;
+	}
+
+	.flex-container {
+		display: grid;
+		grid-template: 1fr / 5fr 4fr;
+		padding-left: 25px;
+		padding-right: 25px;
+		gap: 25px;
 	}
 
 	.main-article {
-		width: 60%;
+		grid-area: 1 / 1 / span 1 / span 1;
 		border-radius: 0.6rem;
-		margin: 0;
 	}
 
 	.main-sidebar {
-		width: 40%;
+		grid-area: 1 / 2 / span 1 / span 1;
 		border-radius: 0.6rem;
-		margin: 0;
 	}
+
+	
 }
